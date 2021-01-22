@@ -16,19 +16,19 @@ public class CalculatedAmount {
 	@Column(name = "to_conversion")
 	private String to;
 	private BigDecimal quantity;
-	private BigDecimal conversionFactor;
+	private BigDecimal conversionMultiple;
 	private BigDecimal amount;
 	private int port;
 	public CalculatedAmount() {
 		super();
 	}
-	public CalculatedAmount(long id,String from, String to, BigDecimal quantity, BigDecimal conversionFactor, BigDecimal amount) {
+	public CalculatedAmount(long id,String from, String to, BigDecimal quantity, BigDecimal conversionMultiple, BigDecimal amount) {
 		super();
 		this.id=id;
 		this.from = from;
 		this.to = to;
 		this.quantity = quantity;
-		this.conversionFactor=conversionFactor;
+		this.conversionMultiple=conversionMultiple;
 		this.amount = amount;
 	}
 	public Long getId() {
@@ -61,11 +61,11 @@ public class CalculatedAmount {
 	public void setAmount(BigDecimal amount) {
 		this.amount = amount;
 	}
-	public BigDecimal getConversionFactor() {
-		return conversionFactor;
+	public BigDecimal getConversionMultiple() {
+		return conversionMultiple;
 	}
-	public void setConversionFactor(BigDecimal conversionFactor) {
-		this.conversionFactor = conversionFactor;
+	public void setConversionMultiple(BigDecimal conversionFactor) {
+		this.conversionMultiple = conversionFactor;
 	}
 	public int getPort() {
 		return port;
